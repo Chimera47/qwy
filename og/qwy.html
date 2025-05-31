@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  #horizontal-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  #horizontal-scroll::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+</style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QWY Software - Delivery Management</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    
+    tailwind.config = {
+      theme: {
+        screens: {
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '1xl':'1366px',
+          '2xl': '1536px',
+          '3xl': '1920px',
+        },
+        extend: {
+          colors: {
+            'qwy-pink': '#C13B7B',
+            'qwy-purple': '#6C3CB5',
+            'qwy-purple-dark': '#4B256B'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../og/style.css">
+</head>
+<body class="bg-white font-sans">
+  <!-- Header -->
+  <header class="w-full border-b border-gray-200 bg-white">
+    <nav class="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[1800px] mx-auto flex items-center justify-between h-20 px-4 sm:px-8 2xl:px-16 3xl:px-24 text-[16px] font-[500] 3xl:text-[18px]">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <div class="h-8 w-32 sm:w-40 flex items-center">
+          <!-- Replace with your logo image -->
+          <img src="../og/images/logo (4).png" alt="QWY Software" class="h-8 w-auto" />
+        </div>
+      </div>
+      <!-- Nav Links -->
+      <ul class="hidden md:flex items-center space-x-6 1xl:space-x-10 2xl:space-x-10 3xl:space-x-12 w-[320px] size-16px sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 1xl:w-[550] 2xl:w-[700px] 3xl:w-[750px]">
+        <li><a href="#" class="text-gray-900 font-medium">Home</a></li>
+        <li><a href="#" class="text-gray-900 font-medium">About</a></li>
+        <li><a href="#" class="text-gray-900 font-medium">Services</a></li>
+        <li><a href="#" class="text-gray-900 font-medium">Products</a></li>
+        <li><a href="#" class="text-gray-900 font-medium">Careers</a></li>
+        <div class="hidden md:block">
+      <a href="#" class="px-6 md:px-8 3xl:px-10 py-2 md:py-2.5 1xl:py-2 whitespace-nowrap 3xl:py-3 text-sm md:text-base 3xl:text-lg font-semibold text-white bg-qwy-purple hover:bg-qwy-purple-dark rounded-full shadow transition-all duration-200">
+  Get in Touch
+</a>
+
+
+         
+      </div>
+      </ul>
+   
+      
+      
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    
+   <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white border-b border-gray-100">
+  <ul class="flex flex-col space-y-2">
+    <li><a href="#" class="block text-gray-900 font-medium">Home</a></li>
+    <li><a href="#" class="block text-gray-900 font-medium">About</a></li>
+    <li><a href="#" class="block text-gray-900 font-medium">Services</a></li>
+    <li><a href="#" class="block text-gray-900 font-medium">Products</a></li>
+    <li><a href="#" class="block text-gray-900 font-medium">Careers</a></li>
+ <li>
+  <a href="#"
+     class="mt-2 inline-block px-4 py-2 rounded-full bg-qwy-purple text-white font-semibold hover:bg-qwy-purple-dark transition text-sm shadow text-left">
+    Get in Touch
+  </a>
+</li>
+
+
+  </ul>
+</div>
+
+
+  </header>
+
+  
+  <main>
+
+<section class="bg-white pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt-28 pb-16 sm:pb-20">
+
+
+
+
+  <div class="max-w-7xl   2xl:max-w-[1500px] 3xl:max-w-[1700px]  mx-auto flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 2xl:px-16 3xl:px-8">
+    <!-- Left: Headline and Description -->
+    <div class="w-full lg:w-1/2 flex flex-col items-start mt-[-20px]">
+<h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[60px] font-bold leading-tight mb-8" style="line-height: 1.1;">
+  <span
+    style="
+      background-image: linear-gradient(to right, #5A2D88 0%, #EB4568 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      padding-bottom: 0.2em;
+      margin-bottom: -0.2em;
+    ">
+    Effortless Delivery<br class="hidden sm:block" />
+    Management, Made<br class="hidden sm:block" />
+    Simple
+  </span>
+</h1>
+
+
+<p class="relative -top-1 text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] max-w-xl 2xl:max-w-[650px] 3xl:max-w-[750px] mb-16 font-medium">
+  Simplify operations, reduce costs, and enhance customer<br> experiences with our advanced delivery management software.
+</p>
+
+
+    </div>
+      <div class="w-full lg:w-1/2 flex justify-center items-end relative mt-8 lg:mt-0 min-h-[340px]">
+     
+      <div class="relative z-10">
+        <img
+  src="../og/images/Group 1000006219.png"
+  alt="Laptop Dashboard"
+  class="w-[320px] sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] 3xl:w-[800px]"
+/>
+
+  </div>
+  </div>
+  </div>
+  
+</section>
+
+
+
+<section class="relative bg-white w-full py-20">
+  <div class="max-w-7xl 1xl:min-w-[1200px] 2xl:min-w-[1400px] 3xl:min-w-[1700px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
+    
+    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[2rem] xl:text-[2.25rem] 2xl:text-[2.5rem] 3xl:text-[3rem] font-semibold mb-4 tracking-wide">
+  Boost Your Delivery Business with an<br class="hidden sm:block" />
+  <span class="block mt-3">All-in-One Digital Platform</span>
+</h2>
+ <p class="text-gray-500 inline-block text-center mb-16 px-4 text-[3.5vw] sm:text-base md:text-lg lg:text-xl xl:text-[1.25rem] 2xl:text-[1.35rem] 3xl:text-[1.25rem] py-6 overflow-hidden text-ellipsis truncate text-center color-dark-gray">
+
+  Streamline operations, enhance efficiency, and deliver exceptional service with our powerful digital solution.
+</p>
+
+
+
+    <!-- Road Image -->
+    <div class="relative w-full mt-24">
+
+      <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
+
+      <!-- Steps overlayed on road using responsive absolute positioning -->
+      <div class="absolute inset-0 w-full h-full">
+        <!-- DO NOT MODIFY ICON STYLES -->
+        <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
+          <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
+        </div>
+        <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
+          <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
+        </div>
+        <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
+          <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
+        </div>
+        <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
+          <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2"/>
+        </div>
+       <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
+  <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
+</div>
+
+        <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
+          <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="w-full py-[160px] bg-white">
+  <h2 class="text-[48px] font-semibold text-center mb-[4rem]">Reshaping Global Businesses</h2>
+  <!-- Remove overflow-x-auto from horizontal-scroll -->
+ <div id="horizontal-scroll" class="relative overflow-x-auto sm:overflow-hidden scrollbar-hide">
+    <!-- Add transform: translateX(...) to scroll-track -->
+   <div id="scroll-track" class="flex flex-nowrap sm:flex-nowrap gap-6 w-max sm:w-[168.4%] transform sm:translate-x-[374px]">
+      <!-- Slide 1 -->
+      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
+        <div class="w-1/2">
+          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+        </div>
+        <div class="w-1/2 px-4">
+          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
+          <p class="text-[#333333] text-left text-[18px] leading-auto break-words:normal">
+            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
+        <div class="w-1/2">
+          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+        </div>
+        <div class="w-1/2 px-4">
+         <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
+          <p class="text-[#333333] text-left text-[18px] leading-auto">
+            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
+        <div class="w-1/2">
+          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+        </div>
+        <div class="w-1/2 px-4">
+          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
+          <p class="text-[#333333] text-left text-[18px] leading-auto">
+            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
+        <div class="w-1/2">
+          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+        </div>
+        <div class="w-1/2 px-4">
+          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
+          <p class="text-[#333333] text-left text-[18px] leading-auto">
+            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+  <script>
+    document.getElementById('mobile-menu-btn').onclick = function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    };
+  </script>
+  <script>
+  // Horizontal scroll animation
+  gsap.registerPlugin(ScrollTrigger);
+
+  const scrollTrack = document.getElementById('scroll-track');
+  const horizontalScrollLength = scrollTrack.scrollWidth - window.innerWidth;
+
+  gsap.to(scrollTrack, {
+    x: () => `-${horizontalScrollLength}px`,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#horizontal-scroll",
+      start: "top top",
+      end: () => `+=${horizontalScrollLength}`,
+      pin: true,
+      scrub: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+    }
+  });
+</script>
+
+</body>
+</html>
