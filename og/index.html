@@ -48,7 +48,7 @@
 </head>
 <body class="bg-white font-sans">
   <!-- Header -->
-  <header class="w-full border-b border-gray-200 bg-white">
+  <header class="w-full border-b border-gray-200 bg-white sm:w-full">
     <nav class="max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[1800px] mx-auto flex items-center justify-between h-20 px-4 sm:px-8 2xl:px-16 3xl:px-24 text-[16px] font-[500] 3xl:text-[18px]">
       <!-- Logo -->
       <div class="flex items-center space-x-3">
@@ -69,41 +69,39 @@
   Get in Touch
 </a>
 
-
          
       </div>
       </ul>
    
-      
-      
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
-          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </nav>
-    
-   <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white border-b border-gray-100">
+   <div class="md:hidden">
+  <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+    <!-- Hamburger Icon (shown by default) -->
+    <svg id="menu-open-icon" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <!-- X (Close) Icon (hidden by default) -->
+    <svg id="menu-close-icon" class="w-7 h-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+</nav>
+
+<div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white border-b border-gray-100">
   <ul class="flex flex-col space-y-2">
     <li><a href="#" class="block text-gray-900 font-medium">Home</a></li>
     <li><a href="#" class="block text-gray-900 font-medium">About</a></li>
     <li><a href="#" class="block text-gray-900 font-medium">Services</a></li>
     <li><a href="#" class="block text-gray-900 font-medium">Products</a></li>
     <li><a href="#" class="block text-gray-900 font-medium">Careers</a></li>
- <li>
-  <a href="#"
-     class="mt-2 inline-block px-4 py-2 rounded-full bg-qwy-purple text-white font-semibold hover:bg-qwy-purple-dark transition text-sm shadow text-left">
-    Get in Touch
-  </a>
-</li>
-
-
+    <li>
+      <a href="#" class="mt-2 inline-block px-4 py-2 rounded-full bg-qwy-purple text-white font-semibold hover:bg-qwy-purple-dark transition text-sm shadow text-left">
+        Get in Touch
+      </a>
+    </li>
   </ul>
 </div>
-
+   
 
   </header>
 
@@ -111,190 +109,287 @@
   <main>
 
 <section class="bg-white pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt-28 pb-16 sm:pb-20">
-
-
-
-
-  <div class="max-w-7xl   2xl:max-w-[1500px] 3xl:max-w-[1700px]  mx-auto flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 2xl:px-16 3xl:px-8">
+  <div class="max-w-7xl 2xl:max-w-[1500px] 3xl:max-w-[1700px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-8 2xl:px-16 3xl:px-8">
     <!-- Left: Headline and Description -->
-    <div class="w-full lg:w-1/2 flex flex-col items-start mt-[-20px]">
-<h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[60px] font-bold leading-tight mb-8" style="line-height: 1.1;">
-  <span
-    style="
-      background-image: linear-gradient(to right, #5A2D88 0%, #EB4568 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      padding-bottom: 0.2em;
-      margin-bottom: -0.2em;
-    ">
-    Effortless Delivery<br class="hidden sm:block" />
-    Management, Made<br class="hidden sm:block" />
-    Simple
-  </span>
-</h1>
+  <div class="w-full lg:w-1/2 flex flex-col items-center sm:!items-start md:!items-start mt-[-20px]">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[60px] font-bold leading-tight mb-8 text-center sm:text-left md:text-left" style="line-height: 1.1;">
+    <span
+      style="
+        background-image: linear-gradient(to right, #5A2D88 0%, #EB4568 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        padding-bottom: 0.2em;
+        margin-bottom: -0.2em;
+      ">
+      Effortless Delivery<br class="hidden sm:block" />
+      Management, Made<br class="hidden sm:block" />
+      Simple
+    </span>
+  </h1>
+  <p class="relative -top-1 text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] max-w-xl 2xl:max-w-[650px] 3xl:max-w-[750px] mb-8 font-medium text-center sm:text-left md:text-left">
+    Simplify operations, reduce costs, and enhance customer<br> experiences with our advanced delivery management software.
+  </p>
+</div>
 
 
-<p class="relative -top-1 text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] max-w-xl 2xl:max-w-[650px] 3xl:max-w-[750px] mb-16 font-medium">
-  Simplify operations, reduce costs, and enhance customer<br> experiences with our advanced delivery management software.
-</p>
 
-
-    </div>
-      <div class="w-full lg:w-1/2 flex justify-center items-end relative mt-8 lg:mt-0 min-h-[340px]">
-     
+    <!-- Hero Image: mobile below text, larger; desktop unchanged -->
+    <div class="w-full lg:w-1/2 flex justify-center items-end relative mb-8 lg:mb-0 mt-0 lg:mt-0 min-h-[340px]">
       <div class="relative z-10">
         <img
-  src="../og/images/Group 1000006219.png"
-  alt="Laptop Dashboard"
-  class="w-[320px] sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] 3xl:w-[800px]"
-/>
-
+          src="../og/images/Group 1000006219.png"
+          alt="Laptop Dashboard"
+          class="w-[360px] sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] 3xl:w-[800px] max-w-full"
+        />
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  
 </section>
-
-
 
 <section class="relative bg-white w-full py-20">
   <div class="max-w-7xl 1xl:min-w-[1200px] 2xl:min-w-[1400px] 3xl:min-w-[1700px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
-    
-    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[2rem] xl:text-[2.25rem] 2xl:text-[2.5rem] 3xl:text-[3rem] font-semibold mb-4 tracking-wide">
+
+    <!-- Heading: separate structure for sm and sm+ -->
+    <!-- Visible only on sm and below -->
+    <h2 class="block sm:hidden text-2xl font-semibold mb-2 tracking-wide text-[#333333] leading-tight">
+      <span class="block">Boost Your</span>
+      <span class="block">Delivery Business with an</span>
+      <span class="block mt-2">All-in-One Digital Platform</span>
+    </h2>
+
+    <!-- Visible on sm+ only (unchanged) -->
+    <h2 class="hidden sm:block text-[48px] font-semibold mb-4 tracking-wide text-[#333333]">
   Boost Your Delivery Business with an<br class="hidden sm:block" />
   <span class="block mt-3">All-in-One Digital Platform</span>
 </h2>
- <p class="text-gray-500 inline-block text-center mb-16 px-4 text-[3.5vw] sm:text-base md:text-lg lg:text-xl xl:text-[1.25rem] 2xl:text-[1.35rem] 3xl:text-[1.25rem] py-6 overflow-hidden text-ellipsis truncate text-center color-dark-gray">
 
-  Streamline operations, enhance efficiency, and deliver exceptional service with our powerful digital solution.
-</p>
+    <!-- Paragraph: visible only on sm+ -->
+    <p class="hidden sm:inline-block text-gray-500 text-center mb-16 px-4 text-base md:text-lg lg:text-xl xl:text-[1.25rem] 2xl:text-[1.35rem] 3xl:text-[1.25rem] py-6 overflow-hidden text-ellipsis truncate color-dark-gray">
+      Streamline operations, enhance efficiency, and deliver exceptional service with our powerful digital solution.
+    </p>
 
+    <!-- Road Image Section -->
+    <div class="relative w-full mt-12 sm:mt-24">
+      <!-- Alternate Image for small screens -->
+      <div class="block sm:hidden">
+        <img src="../og/images/Group 1000006710.png" alt="Mobile Alternative" class="w-full h-auto object-contain" />
+      </div>
 
+      <!-- Roadmap and icons for sm+ screens -->
+      <div class="hidden sm:block relative w-full">
+        <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
 
-    <!-- Road Image -->
-    <div class="relative w-full mt-24">
-
-      <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
-
-      <!-- Steps overlayed on road using responsive absolute positioning -->
-      <div class="absolute inset-0 w-full h-full">
-        <!-- DO NOT MODIFY ICON STYLES -->
-        <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
-          <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
-        </div>
-        <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
-          <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
-        </div>
-        <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
-          <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
-        </div>
-        <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
-          <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2"/>
-        </div>
-       <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
-  <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
-</div>
-
-        <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
-          <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
+        <!-- Steps overlayed on road -->
+        <div class="absolute inset-0 w-full h-full">
+          <!-- DO NOT MODIFY ICON STYLES -->
+          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
+            <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
+          </div>
+          <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
+            <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
+          </div>
+          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
+            <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
+          </div>
+          <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
+            <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2" />
+          </div>
+          <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
+            <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
+          </div>
+          <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
+            <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 
 
+<section class="w-full py-8 sm:py-12 md:py-16 bg-white">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-12 md:mb-16 text-[#333333]">
+    Reshaping Global Businesses
+  </h2>
 
-<section class="w-full py-[160px] bg-white">
-  <h2 class="text-[48px] font-semibold text-center mb-[4rem]">Reshaping Global Businesses</h2>
-  <!-- Remove overflow-x-auto from horizontal-scroll -->
- <div id="horizontal-scroll" class="relative overflow-x-auto sm:overflow-hidden scrollbar-hide">
-    <!-- Add transform: translateX(...) to scroll-track -->
-   <div id="scroll-track" class="flex flex-nowrap sm:flex-nowrap gap-6 w-max sm:w-[168.4%] transform sm:translate-x-[374px]">
-      <!-- Slide 1 -->
-      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
-        <div class="w-1/2">
-          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+  <!-- Horizontal scroll container -->
+  <div id="horizontal-scroll" class="scroll-container overflow-hidden">
+    <div id="scroll-track" class="flex w-max">
+      <!-- Card 1 -->
+        <div class="
+        scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
+        w-[280px] h-[320px] p-4 flex flex-col
+        sm:w-[302.25px] sm:h-[315.96px] sm:p-5
+        md:w-[340px] md:h-[350px] md:p-6
+        lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
+        xl:w-[500px] xl:h-[334px] xl:p-6
+        1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+        2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
+        3xl:w-[668px] 3xl:h-[446px] 3xl:p-6
+        mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+      ">
+        <div class="
+          w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100
+          lg:w-[180] lg:h-[248px]  3xl:w-[301.77px] 3xl:h-[414px] lg:mb-0 lg:mr-8 lg:flex-shrink-0
+        ">
+          <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
         </div>
-        <div class="w-1/2 px-4">
-          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
-          <p class="text-[#333333] text-left text-[18px] leading-auto break-words:normal">
-            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+        <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+          <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+            Startups
+          </h3>
+          <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+             Launch and scale your startup with comprehensive logistics solutions.
           </p>
         </div>
       </div>
-      <!-- Slide 2 -->
-      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
-        <div class="w-1/2">
-          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+
+
+      <!-- Card 2 -->
+      <div class="
+        scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
+        w-[280px] h-[320px] p-4 flex flex-col
+        sm:w-[302.25px] sm:h-[315.96px] sm:p-5
+        md:w-[340px] md:h-[350px] md:p-6
+        lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
+        xl:w-[500px] xl:h-[334px] xl:p-6
+        1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+        2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
+        3xl:w-[668px] 3xl:h-[446px] 3xl:p-6
+        mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+      ">
+        <div class="
+          w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100
+          lg:w-[180] lg:h-[248px]  3xl:w-[301.77px] 3xl:h-[414px] lg:mb-0 lg:mr-8 lg:flex-shrink-0
+        ">
+          <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
         </div>
-        <div class="w-1/2 px-4">
-         <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
-          <p class="text-[#333333] text-left text-[18px] leading-auto">
-            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+        <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+          <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+            Startups
+          </h3>
+          <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+             Launch and scale your startup with comprehensive logistics solutions.
           </p>
         </div>
       </div>
-      <!-- Slide 3 -->
-      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
-        <div class="w-1/2">
-          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+
+      <!-- Card 3 -->
+      <div class="
+        scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
+        w-[280px] h-[320px] p-4 flex flex-col
+        sm:w-[302.25px] sm:h-[315.96px] sm:p-5
+        md:w-[340px] md:h-[350px] md:p-6
+        lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
+        xl:w-[500px] xl:h-[334px] xl:p-6
+        1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+        2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
+        3xl:w-[668px] 3xl:h-[446px] 3xl:p-6
+        mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+      ">
+        <div class="
+          w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100
+          lg:w-[180] lg:h-[248px]  3xl:w-[301.77px] 3xl:h-[414px] lg:mb-0 lg:mr-8 lg:flex-shrink-0
+        ">
+          <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
         </div>
-        <div class="w-1/2 px-4">
-          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
-          <p class="text-[#333333] text-left text-[18px] leading-auto">
-            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+        <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+          <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+            Startups
+          </h3>
+          <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+             Launch and scale your startup with comprehensive logistics solutions.
           </p>
         </div>
       </div>
-      <!-- Slide 4 -->
-      <div class="w-[668px] h-[446px] flex bg-white rounded-2xl border p-6 items-center shadow-md border-[#58595B] border-solid">
-        <div class="w-1/2">
-          <img src="../og/images/1705856268611.png" alt="Enterprises" class="w-[301.77px] h-[414px] object-cover rounded-lg bg-gray-100" />
+
+      <!-- Card 4 -->
+      <div class="
+        scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
+        w-[280px] h-[320px] p-4 flex flex-col
+        sm:w-[302.25px] sm:h-[315.96px] sm:p-5
+        md:w-[340px] md:h-[350px] md:p-6
+        lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
+        xl:w-[500px] xl:h-[334px] xl:p-6
+        1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+        2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
+        3xl:w-[668px] 3xl:h-[446px] 3xl:p-6
+        mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+      ">
+        <div class="
+          w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100
+          lg:w-[180] lg:h-[248px]  3xl:w-[301.77px] 3xl:h-[414px] lg:mb-0 lg:mr-8 lg:flex-shrink-0
+        ">
+          <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left"/>
         </div>
-        <div class="w-1/2 px-4">
-          <h3 class="font-semibold text-[24px] mb-2 text-[#333333]">Enterprises</h3>
-          <p class="text-[#333333] text-left text-[18px] leading-auto">
-            Rapidly scale your business with a SaaS solution that focuses on supply chain automation &amp; last-mile delivery.
+        <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+          <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+            Startups
+          </h3>
+          <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+             Launch and scale your startup with comprehensive logistics solutions.
           </p>
         </div>
       </div>
-    </div>
-  </div>
 </section>
 
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOpenIcon = document.getElementById('menu-open-icon');
+  const menuCloseIcon = document.getElementById('menu-close-icon');
 
-  </main>
-
-  <script>
-    document.getElementById('mobile-menu-btn').onclick = function () {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    };
-  </script>
-  <script>
-  // Horizontal scroll animation
+  menuBtn.addEventListener('click', () => {
+    // Toggle menu visibility
+    mobileMenu.classList.toggle('hidden');
+    // Toggle icons
+    menuOpenIcon.classList.toggle('hidden');
+    menuCloseIcon.classList.toggle('hidden');
+  });
+  // GSAP Horizontal Scroll Implementation
   gsap.registerPlugin(ScrollTrigger);
 
-  const scrollTrack = document.getElementById('scroll-track');
-  const horizontalScrollLength = scrollTrack.scrollWidth - window.innerWidth;
-
-  gsap.to(scrollTrack, {
-    x: () => `-${horizontalScrollLength}px`,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#horizontal-scroll",
-      start: "top top",
-      end: () => `+=${horizontalScrollLength}`,
-      pin: true,
-      scrub: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all scroll content elements
+    let sections = gsap.utils.toArray(".scroll-content");
+    
+    if (sections.length > 0) {
+      // Create the horizontal scroll animation
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".scroll-container",
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          end: () => "+=" + document.querySelector(".scroll-container").offsetWidth,
+          invalidateOnRefresh: true
+        }
+      });
     }
+
+    // Refresh ScrollTrigger on window resize
+    window.addEventListener('resize', () => {
+      ScrollTrigger.refresh();
+    });
   });
 </script>
+
+<style>
+  .scroll-container {
+    overflow: hidden;
+  }
+  
+  .scroll-content {
+    flex-shrink: 0;
+  }
+</style>
+
 
 </body>
 </html>
