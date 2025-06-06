@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <style>
-  #horizontal-scroll {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-  }
+    #horizontal-scroll {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
 
-  #horizontal-scroll::-webkit-scrollbar {
-    display: none; /* WebKit */
-  }
-</style>
+    #horizontal-scroll::-webkit-scrollbar {
+      display: none;
+      /* WebKit */
+    }
+  </style>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QWY Software - Delivery Management</title>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    
+
     tailwind.config = {
       theme: {
         screens: {
@@ -27,7 +31,7 @@
           'md': '768px',
           'lg': '1024px',
           'xl': '1280px',
-          '1xl':'1366px',
+          '1xl': '1366px',
           '2xl': '1536px',
           '3xl': '1920px',
         },
@@ -46,34 +50,39 @@
   </script>
   <link rel="stylesheet" href="../og/style.css">
 </head>
+
 <body class="bg-white font-sans">
   <!-- Header -->
 
 
- <!-- NAVIGATION -->
-<header class="w-full border-b border-gray-200 bg-white">
+  <!-- NAVIGATION -->
+  <header class="w-full border-b border-gray-200 bg-white shadow-sm  z-50">
   <nav class="max-w-7xl mx-auto flex items-center justify-between h-20 px-3 sm:px-4" aria-label="Main navigation">
 
     <!-- Logo -->
-    <div class="flex items-center space-x-2 min-w-[100px] sm:min-w-[120px]">
-      <img src="../og/images/logo (4).png" alt="QWY Software" class="h-8 w-auto max-w-[120px]" />
-    </div>
+   <!-- Logo -->
+<div class="flex items-center lg:-ml-2 xl:-ml-4 2xl:-ml-5 3xl:-ml-[9%] sm:width-[]">
+  <img src="../og/images/logo (4).png" alt="QWY Software" class="h-8 w-auto max-w-[234.35px]" />
+</div>
 
-    <!-- Desktop Navigation: Visible on lg and up -->
-    <div class=" text-[16px] hidden lg:flex items-center space-x-6 1xl:space-x-10 2xl:space-x-10 3xl:space-x-12 ">
-      <a href="#" class="text-gray-900 font-medium">Home</a>
-      <a href="#" class="text-gray-900 font-medium">About</a>
-      <a href="#" class="text-gray-900 font-medium">Services</a>
-      <a href="#" class="text-gray-900 font-medium">Products</a>
-      <a href="#" class="text-gray-900 font-medium">Careers</a>
-      <a href="#" class="px-6 py-2 text-sm font-semibold text-white bg-qwy-purple hover:bg-qwy-purple-dark rounded-full shadow transition-all duration-200">
+
+    <!-- Desktop Navigation -->
+    <div class="hidden lg:flex items-center space-x-6 1xl:space-x-8 2xl:space-x-10 text-[16px] weight-[500px] text-gray-900">
+      <a href="#" class="transition">Home</a>
+      <a href="#" class="transition">About</a>
+      <a href="#" class="transition">Services</a>
+      <a href="#" class=" transition">Products</a>
+      <a href="#" class="transition">Careers</a>
+      <a href="#"
+         class="ml-2 px-5 py-2 text-sm font-semibold text-white bg-qwy-purple hover:bg-qwy-purple-dark rounded-full shadow transition-all duration-200 text-[16px]">
         Get in Touch
       </a>
     </div>
 
-    <!-- Hamburger Button: Visible below lg -->
+    <!-- Mobile Menu Button -->
     <div class="lg:hidden">
-      <button id="mobile-menu-btn" class="p-2 text-gray-700 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+      <button id="mobile-menu-btn" class="p-2 text-gray-700 focus:outline-none" aria-label="Toggle menu"
+        aria-expanded="false">
         <svg id="menu-open-icon" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -84,28 +93,33 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu: Visible below lg -->
-  <div id="mobile-menu" class="hidden flex-col space-y-2 px-4 pb-4 bg-white border-t border-gray-100 transition-all duration-300 lg:hidden">
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="hidden flex-col space-y-2 px-4 pb-4 bg-white border-t border-gray-100 transition-all duration-300 lg:hidden">
     <a href="#" class="block text-gray-900 font-medium">Home</a>
     <a href="#" class="block text-gray-900 font-medium">About</a>
     <a href="#" class="block text-gray-900 font-medium">Services</a>
     <a href="#" class="block text-gray-900 font-medium">Products</a>
     <a href="#" class="block text-gray-900 font-medium">Careers</a>
-    <a href="#" class="inline-block mt-2 px-4 py-2 bg-qwy-purple text-white font-semibold rounded-full shadow hover:bg-qwy-purple-dark transition text-sm">
+    <a href="#"
+      class="inline-block mt-2 px-4 py-2 bg-qwy-purple text-white font-semibold rounded-full shadow hover:bg-qwy-purple-dark transition text-sm">
       Get in Touch
     </a>
   </div>
 </header>
-  
-  <main>
 
-<section class="bg-white pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt-28 pb-16 sm:pb-20">
-  <div class="max-w-7xl 2xl:max-w-[1500px] 3xl:max-w-[1600px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-8 2xl:px-16 3xl:px-8">
-    <!-- Left: Headline and Description -->
-  <div class="w-full lg:w-1/2 flex flex-col items-center sm:!items-start md:!items-start mt-[-20px]">
-  <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[60px] font-bold leading-tight mb-8 text-center sm:text-left md:text-left" style="line-height: 1.1;">
-    <span
-      style="
+
+
+
+    <section class="bg-white pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt-28 pb-16 sm:pb-20">
+      <div
+        class="max-w-7xl 2xl:max-w-[1500px] 3xl:max-w-[1600px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 sm:px-8 2xl:px-16 3xl:px-26">
+        <!-- Left: Headline and Description -->
+        <div class="w-full lg:w-1/2 flex flex-col items-center sm:!items-start md:!items-start mt-[-20px]">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[60px] font-bold leading-tight mb-8 text-center sm:text-left md:text-left"
+            style="line-height: 1.1;">
+            <span style="
         background-image: linear-gradient(to right, #5A2D88 0%, #EB4568 100%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -114,106 +128,110 @@
         padding-bottom: 0.2em;
         margin-bottom: -0.2em;
       ">
-      Effortless Delivery<br class="hidden sm:block" />
-      Management, Made<br class="hidden sm:block" />
-      Simple
-    </span>
-  </h1>
-  <p class="relative -top-1 text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] max-w-xl 2xl:max-w-[650px] 3xl:max-w-[750px] mb-8 font-medium text-center sm:text-left md:text-left">
-    Simplify operations, reduce costs, and enhance customer<br> experiences with our advanced delivery management software.
-  </p>
-</div>
+              Effortless Delivery<br class="hidden sm:block" />
+              Management, Made<br class="hidden sm:block" />
+              Simple
+            </span>
+          </h1>
+          <p
+            class="relative -top-1 text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] max-w-xl 2xl:max-w-[650px] 3xl:max-w-[750px] mb-8 font-medium text-center sm:text-left md:text-left">
+            Simplify operations, reduce costs, and enhance customer<br> experiences with our advanced delivery
+            management software.
+          </p>
+        </div>
 
 
 
-    <!-- Hero Image: mobile below text, larger; desktop unchanged -->
-    <div class="w-full lg:w-1/2 flex justify-center items-end relative mb-8 lg:mb-0 mt-0 lg:mt-0 min-h-[340px]">
-      <div class="relative z-10">
-        <img
-          src="../og/images/Group 1000006219.png"
-          alt="Laptop Dashboard"
-          class="w-[360px] sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] 3xl:w-[800px] max-w-full"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="relative bg-white w-full py-20">
-  <div class="max-w-7xl 1xl:min-w-[1200px] 2xl:min-w-[1400px] 3xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
-
-    <!-- Heading: separate structure for sm and sm+ -->
-    <!-- Visible only on sm and below -->
-    <h2 class="block sm:hidden text-2xl font-semibold mb-2 tracking-wide text-[#333333] leading-tight">
-      <span class="block">Boost Your</span>
-      <span class="block">Delivery Business with an</span>
-      <span class="block mt-2">All-in-One Digital Platform</span>
-    </h2>
-
-    <!-- Visible on sm+ only (unchanged) -->
-    <h2 class="hidden sm:block text-[48px] font-semibold mb-4 tracking-wide text-[#333333]">
-  Boost Your Delivery Business with an<br class="hidden sm:block" />
-  <span class="block mt-3">All-in-One Digital Platform</span>
-</h2>
-
-    <!-- Paragraph: visible only on sm+ -->
-   <p class="hidden lg:block text-gray-500 text-center mb-16 px-4 text-base md:text-lg lg:text-xl xl:text-[1.25rem] 2xl:text-[1.35rem] 3xl:text-[1.25rem] py-6 overflow-hidden text-ellipsis truncate color-dark-gray">
-  Streamline operations, enhance efficiency, and deliver exceptional service with our powerful digital solution.
-</p>
-
-
-    <!-- Road Image Section -->
-    <div class="relative w-full mt-12 sm:mt-24">
-      <!-- Alternate Image for small screens -->
-      <div class="block sm:hidden">
-        <img src="../og/images/Group 1000006710.png" alt="Mobile Alternative" class="w-full h-auto object-contain" />
-      </div>
-
-      <!-- Roadmap and icons for sm+ screens -->
-      <div class="hidden sm:block relative w-full">
-        <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
-
-        <!-- Steps overlayed on road -->
-        <div class="absolute inset-0 w-full h-full">
-          <!-- DO NOT MODIFY ICON STYLES -->
-          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
-            <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
-          </div>
-          <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
-            <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
-          </div>
-          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
-            <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
-          </div>
-          <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
-            <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2" />
-          </div>
-          <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
-            <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
-          </div>
-          <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
-            <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
+        <!-- Hero Image: mobile below text, larger; desktop unchanged -->
+        <div class="w-full lg:w-1/2 flex justify-center items-end relative mb-8 lg:mb-0 mt-0 lg:mt-0 min-h-[340px]">
+          <div class="relative z-10">
+            <img src="../og/images/Group 1000006219.png" alt="Laptop Dashboard"
+              class="w-[360px] sm:w-[400px] md:w-[480px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] 3xl:w-[800px] max-w-full" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="relative bg-white w-full py-20">
+      <div
+        class="max-w-7xl 1xl:min-w-[1200px] 2xl:min-w-[1400px] 3xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
+
+        <!-- Heading: separate structure for sm and sm+ -->
+        <!-- Visible only on sm and below -->
+        <h2 class="block sm:hidden text-2xl font-semibold mb-2 tracking-wide text-[#333333] leading-tight">
+          <span class="block">Boost Your</span>
+          <span class="block">Delivery Business with an</span>
+          <span class="block mt-2">All-in-One Digital Platform</span>
+        </h2>
+
+        <!-- Visible on sm+ only (unchanged) -->
+        <h2 class="hidden sm:block text-[48px] font-semibold mb-4 tracking-wide text-[#333333]">
+          Boost Your Delivery Business with an<br class="hidden sm:block" />
+          <span class="block mt-3">All-in-One Digital Platform</span>
+        </h2>
+
+        <!-- Paragraph: visible only on sm+ -->
+        <p
+          class="hidden lg:block text-gray-500 text-center mb-16 px-4 text-base md:text-lg lg:text-xl xl:text-[1.25rem] 2xl:text-[1.35rem] 3xl:text-[1.25rem] py-6 overflow-hidden text-ellipsis truncate color-dark-gray">
+          Streamline operations, enhance efficiency, and deliver exceptional service with our powerful digital solution.
+        </p>
 
 
-<section class="w-full pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36 3xl:pt-60 pb-8 sm:pb-12 md:pb-16 bg-white">
-  <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-12 md:mb-16 text-[#333333]">
-    Reshaping Global Businesses
-  </h2>
+        <!-- Road Image Section -->
+        <div class="relative w-full mt-12 sm:mt-24">
+          <!-- Alternate Image for small screens -->
+          <div class="block sm:hidden">
+            <img src="../og/images/Group 1000006710.png" alt="Mobile Alternative"
+              class="w-full h-auto object-contain" />
+          </div>
 
-  <!-- Horizontal scroll container -->
-  <div id="horizontal-scroll" class="scroll-container overflow-hidden">
-    <div id="scroll-track" class="flex w-max">
-     
+          <!-- Roadmap and icons for sm+ screens -->
+          <div class="hidden sm:block relative w-full">
+            <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
 
-      <!-- Card 1 -->
-      <div class="
+            <!-- Steps overlayed on road -->
+            <div class="absolute inset-0 w-full h-full">
+              <!-- DO NOT MODIFY ICON STYLES -->
+              <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
+                <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
+              </div>
+              <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
+                <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
+              </div>
+              <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
+                <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
+              </div>
+              <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
+                <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2" />
+              </div>
+              <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
+                <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
+              </div>
+              <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
+                <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section
+      class="w-full pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36 3xl:pt-60 pb-8 sm:pb-12 md:pb-16 bg-white">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-12 md:mb-16 text-[#333333]">
+        Reshaping Global Businesses
+      </h2>
+
+      <!-- Horizontal scroll container -->
+      <div id="horizontal-scroll" class="scroll-container overflow-hidden">
+        <div id="scroll-track" class="flex w-max">
+
+
+          <!-- Card 1 -->
+          <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
@@ -225,26 +243,28 @@
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
   mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
-  <div class="
+            <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
     sm:w-[281.02px] sm:h-[202.37px] lg:w-[180px] lg:h-[248px] xl:w-[225px] xl:h-[310px] 1xl:w-[257px] 1xl:h-[353px] 2xl:w-[279px] 2xl:h-[383px] 3xl:w-[301.77px] 3xl:h-[414px] 
     lg:mb-0 lg:mr-8 lg:flex-shrink-0
   ">
-    <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
-  </div>
-  <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
-    <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
-      Startups
-    </h3>
-    <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
-       Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile <br>delivery
-    </p>
-  </div>
-</div>
+              <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
+            </div>
+            <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+              <h3
+                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                Startups
+              </h3>
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+                Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
+                <br>delivery
+              </p>
+            </div>
+          </div>
 
 
-      <!-- Card 2 -->
-    <div class="
+          <!-- Card 2 -->
+          <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
@@ -256,26 +276,28 @@
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
   mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
-  <div class="
+            <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
     sm:w-[281.02px] sm:h-[202.37px] lg:w-[180px] lg:h-[248px] xl:w-[225px] xl:h-[310px] 1xl:w-[257px] 1xl:h-[353px] 2xl:w-[279px] 2xl:h-[383px] 3xl:w-[301.77px] 3xl:h-[414px] 
     lg:mb-0 lg:mr-8 lg:flex-shrink-0
   ">
-    <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
-  </div>
-  <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
-    <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
-      Startups
-    </h3>
-    <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
-       Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile <br>delivery
-    </p>
-  </div>
-</div>
+              <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
+            </div>
+            <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+              <h3
+                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                Startups
+              </h3>
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+                Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
+                <br>delivery
+              </p>
+            </div>
+          </div>
 
 
-      <!-- Card 3 -->
-       <div class="
+          <!-- Card 3 -->
+          <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
@@ -287,26 +309,28 @@
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
   mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
-  <div class="
+            <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
     sm:w-[281.02px] sm:h-[202.37px] lg:w-[180px] lg:h-[248px] xl:w-[225px] xl:h-[310px] 1xl:w-[257px] 1xl:h-[353px] 2xl:w-[279px] 2xl:h-[383px] 3xl:w-[301.77px] 3xl:h-[414px] 
     lg:mb-0 lg:mr-8 lg:flex-shrink-0
   ">
-    <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
-  </div>
-  <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
-    <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
-      Startups
-    </h3>
-    <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
-       Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile <br>delivery
-    </p>
-  </div>
-</div>
+              <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
+            </div>
+            <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+              <h3
+                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                Startups
+              </h3>
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+                Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
+                <br>delivery
+              </p>
+            </div>
+          </div>
 
 
-      <!-- Card 4 -->
-       <div class="
+          <!-- Card 4 -->
+          <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
@@ -318,34 +342,36 @@
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
   mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
-  <div class="
+            <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
     sm:w-[281.02px] sm:h-[202.37px] lg:w-[180px] lg:h-[248px] xl:w-[225px] xl:h-[310px] 1xl:w-[257px] 1xl:h-[353px] 2xl:w-[279px] 2xl:h-[383px] 3xl:w-[301.77px] 3xl:h-[414px] 
     lg:mb-0 lg:mr-8 lg:flex-shrink-0
   ">
-    <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
-  </div>
-  <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
-    <h3 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
-      Startups
-    </h3>
-    <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
-       Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile <br>delivery
-    </p>
-  </div>
-</div>
-</div>
-</div>
+              <img src="../og/images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
+            </div>
+            <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
+              <h3
+                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                Startups
+              </h3>
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+                Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
+                <br>delivery
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</section>
-
-
-
-<body class="bg-white">
+    </section>
 
 
 
-  <section class="bg-[#F4F4F6] rounded-xl mx-auto my-12 px-4 py-10
+    <body class="bg-white">
+
+
+
+      <section class="bg-[#F4F4F6] rounded-xl mx-auto my-12 px-4 py-10
   sm:max-w-[640px]
     md:max-w-[768px]
     lg:max-w-[1024px]
@@ -353,119 +379,142 @@
     1xl:max-w-[1280px]
     2xl:max-w-[1360px]
     3xl:max-w-[1600px] h-[742.02px] ">
-    <h2 class="text-[32px] md:text-[40px] lg:text-[48px] font-bold mb-10 leading-snug">
-      <span class="text-[#625EA9]">Smart Technology</span> 
-      <span class="text-[#22223B] font-normal"> for <br></span>
-      <span class="text-[#22223B] font-normal">Future Businesses</span>
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-50 h-50 flex items-center justify-center bg-[#D9D9D9] border-4 border-white rounded-md shadow">
-             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2507_10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.846344" y="0.524414" width="24" height="24" fill="#F4F4F6"/>
-</mask>
-<g mask="url(#mask0_2507_10)">
-<path d="M14.8463 13.5244C14.013 13.5244 13.3047 13.2327 12.7213 12.6494C12.138 12.0661 11.8463 11.3577 11.8463 10.5244C11.8463 9.69108 12.138 8.98275 12.7213 8.39941C13.3047 7.81608 14.013 7.52441 14.8463 7.52441C15.6797 7.52441 16.388 7.81608 16.9713 8.39941C17.5547 8.98275 17.8463 9.69108 17.8463 10.5244C17.8463 11.3577 17.5547 12.0661 16.9713 12.6494C16.388 13.2327 15.6797 13.5244 14.8463 13.5244ZM7.84634 16.5244C7.29634 16.5244 6.82551 16.3286 6.43384 15.9369C6.04218 15.5452 5.84634 15.0744 5.84634 14.5244V6.52441C5.84634 5.97441 6.04218 5.50358 6.43384 5.11191C6.82551 4.72025 7.29634 4.52441 7.84634 4.52441H21.8463C22.3963 4.52441 22.8672 4.72025 23.2588 5.11191C23.6505 5.50358 23.8463 5.97441 23.8463 6.52441V14.5244C23.8463 15.0744 23.6505 15.5452 23.2588 15.9369C22.8672 16.3286 22.3963 16.5244 21.8463 16.5244H7.84634ZM9.84634 14.5244H19.8463C19.8463 13.9744 20.0422 13.5036 20.4338 13.1119C20.8255 12.7202 21.2963 12.5244 21.8463 12.5244V8.52441C21.2963 8.52441 20.8255 8.32858 20.4338 7.93691C20.0422 7.54525 19.8463 7.07441 19.8463 6.52441H9.84634C9.84634 7.07441 9.65051 7.54525 9.25884 7.93691C8.86718 8.32858 8.39634 8.52441 7.84634 8.52441V12.5244C8.39634 12.5244 8.86718 12.7202 9.25884 13.1119C9.65051 13.5036 9.84634 13.9744 9.84634 14.5244ZM20.8463 20.5244H3.84634C3.29634 20.5244 2.82551 20.3286 2.43384 19.9369C2.04218 19.5452 1.84634 19.0744 1.84634 18.5244V7.52441H3.84634V18.5244H20.8463V20.5244Z" fill="#1C1B1F"/>
-</g>
-</svg>
-          
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-      
-       <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2509_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.912292" y="0.524414" width="24" height="24" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_2509_18)">
-<path d="M10.5123 16.1244L11.9123 14.6994L9.73729 12.5244L11.9123 10.3494L10.5123 8.92441L6.91229 12.5244L10.5123 16.1244ZM15.3123 16.1244L18.9123 12.5244L15.3123 8.92441L13.9123 10.3494L16.0873 12.5244L13.9123 14.6994L15.3123 16.1244ZM5.91229 21.5244C5.36229 21.5244 4.89146 21.3286 4.49979 20.9369C4.10813 20.5452 3.91229 20.0744 3.91229 19.5244V5.52441C3.91229 4.97441 4.10813 4.50358 4.49979 4.11191C4.89146 3.72025 5.36229 3.52441 5.91229 3.52441H19.9123C20.4623 3.52441 20.9331 3.72025 21.3248 4.11191C21.7165 4.50358 21.9123 4.97441 21.9123 5.52441V19.5244C21.9123 20.0744 21.7165 20.5452 21.3248 20.9369C20.9331 21.3286 20.4623 21.5244 19.9123 21.5244H5.91229ZM5.91229 19.5244H19.9123V5.52441H5.91229V19.5244Z" fill="#1C1B1F"/>
-</g>
-</svg>
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Robust & Scalable</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-      <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
-                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2521_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.912292" y="0.559082" width="24" height="24" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_2521_24)">
-<path d="M7.91229 17.5591H14.9123V15.5591H7.91229V17.5591ZM7.91229 13.5591H17.9123V11.5591H7.91229V13.5591ZM7.91229 9.55908H17.9123V7.55908H7.91229V9.55908ZM5.91229 21.5591C5.36229 21.5591 4.89146 21.3632 4.49979 20.9716C4.10813 20.5799 3.91229 20.1091 3.91229 19.5591V5.55908C3.91229 5.00908 4.10813 4.53825 4.49979 4.14658C4.89146 3.75492 5.36229 3.55908 5.91229 3.55908H19.9123C20.4623 3.55908 20.9331 3.75492 21.3248 4.14658C21.7165 4.53825 21.9123 5.00908 21.9123 5.55908V19.5591C21.9123 20.1091 21.7165 20.5799 21.3248 20.9716C20.9331 21.3632 20.4623 21.5591 19.9123 21.5591H5.91229ZM5.91229 19.5591H19.9123V5.55908H5.91229V19.5591Z" fill="#1C1B1F"/>
-</g>
-</svg>
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-      <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
-                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2521_31" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.846313" y="0.456543" width="24" height="24" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_2521_31)">
-<path d="M2.84631 20.4565V17.6565C2.84631 17.1065 2.98798 16.5899 3.27131 16.1065C3.55465 15.6232 3.94631 15.2565 4.44631 15.0065C5.29631 14.5732 6.25465 14.2065 7.32131 13.9065C8.38798 13.6065 9.56298 13.4565 10.8463 13.4565C11.3463 13.4565 11.8338 13.4815 12.3088 13.5315C12.7838 13.5815 13.2463 13.6565 13.6963 13.7565L11.9463 15.5065C11.763 15.4732 11.5838 15.4565 11.4088 15.4565H10.8463C9.66298 15.4565 8.60048 15.5982 7.65881 15.8815C6.71715 16.1649 5.94631 16.4732 5.34631 16.8065C5.19631 16.8899 5.07548 17.0065 4.98381 17.1565C4.89215 17.3065 4.84631 17.4732 4.84631 17.6565V18.4565H11.0963L13.0963 20.4565H2.84631ZM16.3963 20.8565L12.9463 17.4065L14.3463 16.0065L16.3963 18.0565L21.4463 13.0065L22.8463 14.4065L16.3963 20.8565ZM10.8463 12.4565C9.74631 12.4565 8.80465 12.0649 8.02131 11.2815C7.23798 10.4982 6.84631 9.55654 6.84631 8.45654C6.84631 7.35654 7.23798 6.41488 8.02131 5.63154C8.80465 4.84821 9.74631 4.45654 10.8463 4.45654C11.9463 4.45654 12.888 4.84821 13.6713 5.63154C14.4546 6.41488 14.8463 7.35654 14.8463 8.45654C14.8463 9.55654 14.4546 10.4982 13.6713 11.2815C12.888 12.0649 11.9463 12.4565 10.8463 12.4565ZM10.8463 10.4565C11.3963 10.4565 11.8671 10.2607 12.2588 9.86904C12.6505 9.47738 12.8463 9.00654 12.8463 8.45654C12.8463 7.90654 12.6505 7.43571 12.2588 7.04404C11.8671 6.65238 11.3963 6.45654 10.8463 6.45654C10.2963 6.45654 9.82548 6.65238 9.43381 7.04404C9.04215 7.43571 8.84631 7.90654 8.84631 8.45654C8.84631 9.00654 9.04215 9.47738 9.43381 9.86904C9.82548 10.2607 10.2963 10.4565 10.8463 10.4565Z" fill="#1C1B1F"/>
-</g>
-</svg>
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-      <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
-                   <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2521_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.912292" y="0.559082" width="24" height="24" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_2521_24)">
-<path d="M7.91229 17.5591H14.9123V15.5591H7.91229V17.5591ZM7.91229 13.5591H17.9123V11.5591H7.91229V13.5591ZM7.91229 9.55908H17.9123V7.55908H7.91229V9.55908ZM5.91229 21.5591C5.36229 21.5591 4.89146 21.3632 4.49979 20.9716C4.10813 20.5799 3.91229 20.1091 3.91229 19.5591V5.55908C3.91229 5.00908 4.10813 4.53825 4.49979 4.14658C4.89146 3.75492 5.36229 3.55908 5.91229 3.55908H19.9123C20.4623 3.55908 20.9331 3.75492 21.3248 4.14658C21.7165 4.53825 21.9123 5.00908 21.9123 5.55908V19.5591C21.9123 20.1091 21.7165 20.5799 21.3248 20.9716C20.9331 21.3632 20.4623 21.5591 19.9123 21.5591H5.91229ZM5.91229 19.5591H19.9123V5.55908H5.91229V19.5591Z" fill="#1C1B1F"/>
-</g>
-</svg>
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-      <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
-        <span class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_2521_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
-<rect x="0.912292" y="0.466309" width="24" height="24" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_2521_38)">
-<path d="M11.9123 19.8913V13.0413L5.91229 9.56631V16.4163L11.9123 19.8913ZM13.9123 19.8913L19.9123 16.4163V9.56631L13.9123 13.0413V19.8913ZM11.9123 22.1913L4.91229 18.1663C4.59563 17.983 4.34979 17.7413 4.17479 17.4413C3.99979 17.1413 3.91229 16.808 3.91229 16.4413V8.49131C3.91229 8.12464 3.99979 7.79131 4.17479 7.49131C4.34979 7.19131 4.59563 6.94964 4.91229 6.76631L11.9123 2.74131C12.229 2.55798 12.5623 2.46631 12.9123 2.46631C13.2623 2.46631 13.5956 2.55798 13.9123 2.74131L20.9123 6.76631C21.229 6.94964 21.4748 7.19131 21.6498 7.49131C21.8248 7.79131 21.9123 8.12464 21.9123 8.49131V16.4413C21.9123 16.808 21.8248 17.1413 21.6498 17.4413C21.4748 17.7413 21.229 17.983 20.9123 18.1663L13.9123 22.1913C13.5956 22.3746 13.2623 22.4663 12.9123 22.4663C12.5623 22.4663 12.229 22.3746 11.9123 22.1913ZM16.9123 8.99131L18.8373 7.89131L12.9123 4.46631L10.9623 5.59131L16.9123 8.99131ZM12.9123 11.3163L14.8623 10.1913L8.93729 6.76631L6.98729 7.89131L12.9123 11.3163Z" fill="#1C1B1F"/>
-</g>
-</svg>        
-        </span>
-        <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
-        <p class="text-[#22223B] text-[16px] leading-normal">
-          Open to integrate with your existing ordering systems and other software to provide seamless automation.
-        </p>
-      </div>
-    </div>
-  </section>
-</body>
+        <h2 class="text-[32px] md:text-[40px] lg:text-[48px] font-bold mb-10 leading-snug">
+          <span class="text-[#625EA9]">Smart Technology</span>
+          <span class="text-[#22223B] font-normal"> for <br></span>
+          <span class="text-[#22223B] font-normal">Future Businesses</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Card 1 -->
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-50 h-50 flex items-center justify-center bg-[#D9D9D9] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2507_10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.846344" y="0.524414" width="24" height="24" fill="#F4F4F6" />
+                </mask>
+                <g mask="url(#mask0_2507_10)">
+                  <path
+                    d="M14.8463 13.5244C14.013 13.5244 13.3047 13.2327 12.7213 12.6494C12.138 12.0661 11.8463 11.3577 11.8463 10.5244C11.8463 9.69108 12.138 8.98275 12.7213 8.39941C13.3047 7.81608 14.013 7.52441 14.8463 7.52441C15.6797 7.52441 16.388 7.81608 16.9713 8.39941C17.5547 8.98275 17.8463 9.69108 17.8463 10.5244C17.8463 11.3577 17.5547 12.0661 16.9713 12.6494C16.388 13.2327 15.6797 13.5244 14.8463 13.5244ZM7.84634 16.5244C7.29634 16.5244 6.82551 16.3286 6.43384 15.9369C6.04218 15.5452 5.84634 15.0744 5.84634 14.5244V6.52441C5.84634 5.97441 6.04218 5.50358 6.43384 5.11191C6.82551 4.72025 7.29634 4.52441 7.84634 4.52441H21.8463C22.3963 4.52441 22.8672 4.72025 23.2588 5.11191C23.6505 5.50358 23.8463 5.97441 23.8463 6.52441V14.5244C23.8463 15.0744 23.6505 15.5452 23.2588 15.9369C22.8672 16.3286 22.3963 16.5244 21.8463 16.5244H7.84634ZM9.84634 14.5244H19.8463C19.8463 13.9744 20.0422 13.5036 20.4338 13.1119C20.8255 12.7202 21.2963 12.5244 21.8463 12.5244V8.52441C21.2963 8.52441 20.8255 8.32858 20.4338 7.93691C20.0422 7.54525 19.8463 7.07441 19.8463 6.52441H9.84634C9.84634 7.07441 9.65051 7.54525 9.25884 7.93691C8.86718 8.32858 8.39634 8.52441 7.84634 8.52441V12.5244C8.39634 12.5244 8.86718 12.7202 9.25884 13.1119C9.65051 13.5036 9.84634 13.9744 9.84634 14.5244ZM20.8463 20.5244H3.84634C3.29634 20.5244 2.82551 20.3286 2.43384 19.9369C2.04218 19.5452 1.84634 19.0744 1.84634 18.5244V7.52441H3.84634V18.5244H20.8463V20.5244Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide <br>seamless automation.
+            </p>
+          </div>
+
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2509_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.912292" y="0.524414" width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_2509_18)">
+                  <path
+                    d="M10.5123 16.1244L11.9123 14.6994L9.73729 12.5244L11.9123 10.3494L10.5123 8.92441L6.91229 12.5244L10.5123 16.1244ZM15.3123 16.1244L18.9123 12.5244L15.3123 8.92441L13.9123 10.3494L16.0873 12.5244L13.9123 14.6994L15.3123 16.1244ZM5.91229 21.5244C5.36229 21.5244 4.89146 21.3286 4.49979 20.9369C4.10813 20.5452 3.91229 20.0744 3.91229 19.5244V5.52441C3.91229 4.97441 4.10813 4.50358 4.49979 4.11191C4.89146 3.72025 5.36229 3.52441 5.91229 3.52441H19.9123C20.4623 3.52441 20.9331 3.72025 21.3248 4.11191C21.7165 4.50358 21.9123 4.97441 21.9123 5.52441V19.5244C21.9123 20.0744 21.7165 20.5452 21.3248 20.9369C20.9331 21.3286 20.4623 21.5244 19.9123 21.5244H5.91229ZM5.91229 19.5244H19.9123V5.52441H5.91229V19.5244Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Robust & Scalable</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide seamless automation.
+            </p>
+          </div>
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[170px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2521_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.912292" y="0.559082" width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_2521_24)">
+                  <path
+                    d="M7.91229 17.5591H14.9123V15.5591H7.91229V17.5591ZM7.91229 13.5591H17.9123V11.5591H7.91229V13.5591ZM7.91229 9.55908H17.9123V7.55908H7.91229V9.55908ZM5.91229 21.5591C5.36229 21.5591 4.89146 21.3632 4.49979 20.9716C4.10813 20.5799 3.91229 20.1091 3.91229 19.5591V5.55908C3.91229 5.00908 4.10813 4.53825 4.49979 4.14658C4.89146 3.75492 5.36229 3.55908 5.91229 3.55908H19.9123C20.4623 3.55908 20.9331 3.75492 21.3248 4.14658C21.7165 4.53825 21.9123 5.00908 21.9123 5.55908V19.5591C21.9123 20.1091 21.7165 20.5799 21.3248 20.9716C20.9331 21.3632 20.4623 21.5591 19.9123 21.5591H5.91229ZM5.91229 19.5591H19.9123V5.55908H5.91229V19.5591Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide seamless automation.
+            </p>
+          </div>
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2521_31" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.846313" y="0.456543" width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_2521_31)">
+                  <path
+                    d="M2.84631 20.4565V17.6565C2.84631 17.1065 2.98798 16.5899 3.27131 16.1065C3.55465 15.6232 3.94631 15.2565 4.44631 15.0065C5.29631 14.5732 6.25465 14.2065 7.32131 13.9065C8.38798 13.6065 9.56298 13.4565 10.8463 13.4565C11.3463 13.4565 11.8338 13.4815 12.3088 13.5315C12.7838 13.5815 13.2463 13.6565 13.6963 13.7565L11.9463 15.5065C11.763 15.4732 11.5838 15.4565 11.4088 15.4565H10.8463C9.66298 15.4565 8.60048 15.5982 7.65881 15.8815C6.71715 16.1649 5.94631 16.4732 5.34631 16.8065C5.19631 16.8899 5.07548 17.0065 4.98381 17.1565C4.89215 17.3065 4.84631 17.4732 4.84631 17.6565V18.4565H11.0963L13.0963 20.4565H2.84631ZM16.3963 20.8565L12.9463 17.4065L14.3463 16.0065L16.3963 18.0565L21.4463 13.0065L22.8463 14.4065L16.3963 20.8565ZM10.8463 12.4565C9.74631 12.4565 8.80465 12.0649 8.02131 11.2815C7.23798 10.4982 6.84631 9.55654 6.84631 8.45654C6.84631 7.35654 7.23798 6.41488 8.02131 5.63154C8.80465 4.84821 9.74631 4.45654 10.8463 4.45654C11.9463 4.45654 12.888 4.84821 13.6713 5.63154C14.4546 6.41488 14.8463 7.35654 14.8463 8.45654C14.8463 9.55654 14.4546 10.4982 13.6713 11.2815C12.888 12.0649 11.9463 12.4565 10.8463 12.4565ZM10.8463 10.4565C11.3963 10.4565 11.8671 10.2607 12.2588 9.86904C12.6505 9.47738 12.8463 9.00654 12.8463 8.45654C12.8463 7.90654 12.6505 7.43571 12.2588 7.04404C11.8671 6.65238 11.3963 6.45654 10.8463 6.45654C10.2963 6.45654 9.82548 6.65238 9.43381 7.04404C9.04215 7.43571 8.84631 7.90654 8.84631 8.45654C8.84631 9.00654 9.04215 9.47738 9.43381 9.86904C9.82548 10.2607 10.2963 10.4565 10.8463 10.4565Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide seamless automation.
+            </p>
+          </div>
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2521_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.912292" y="0.559082" width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_2521_24)">
+                  <path
+                    d="M7.91229 17.5591H14.9123V15.5591H7.91229V17.5591ZM7.91229 13.5591H17.9123V11.5591H7.91229V13.5591ZM7.91229 9.55908H17.9123V7.55908H7.91229V9.55908ZM5.91229 21.5591C5.36229 21.5591 4.89146 21.3632 4.49979 20.9716C4.10813 20.5799 3.91229 20.1091 3.91229 19.5591V5.55908C3.91229 5.00908 4.10813 4.53825 4.49979 4.14658C4.89146 3.75492 5.36229 3.55908 5.91229 3.55908H19.9123C20.4623 3.55908 20.9331 3.75492 21.3248 4.14658C21.7165 4.53825 21.9123 5.00908 21.9123 5.55908V19.5591C21.9123 20.1091 21.7165 20.5799 21.3248 20.9716C20.9331 21.3632 20.4623 21.5591 19.9123 21.5591H5.91229ZM5.91229 19.5591H19.9123V5.55908H5.91229V19.5591Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide seamless automation.
+            </p>
+          </div>
+          <div class="relative bg-white rounded-xl p-6 pt-10 min-h-[150px] flex flex-col shadow-none">
+            <span
+              class="absolute -top-5 left-6 w-8 h-8 flex items-center justify-center bg-[#E0DFF1] border-4 border-white rounded-md shadow">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2521_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                  height="25">
+                  <rect x="0.912292" y="0.466309" width="24" height="24" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_2521_38)">
+                  <path
+                    d="M11.9123 19.8913V13.0413L5.91229 9.56631V16.4163L11.9123 19.8913ZM13.9123 19.8913L19.9123 16.4163V9.56631L13.9123 13.0413V19.8913ZM11.9123 22.1913L4.91229 18.1663C4.59563 17.983 4.34979 17.7413 4.17479 17.4413C3.99979 17.1413 3.91229 16.808 3.91229 16.4413V8.49131C3.91229 8.12464 3.99979 7.79131 4.17479 7.49131C4.34979 7.19131 4.59563 6.94964 4.91229 6.76631L11.9123 2.74131C12.229 2.55798 12.5623 2.46631 12.9123 2.46631C13.2623 2.46631 13.5956 2.55798 13.9123 2.74131L20.9123 6.76631C21.229 6.94964 21.4748 7.19131 21.6498 7.49131C21.8248 7.79131 21.9123 8.12464 21.9123 8.49131V16.4413C21.9123 16.808 21.8248 17.1413 21.6498 17.4413C21.4748 17.7413 21.229 17.983 20.9123 18.1663L13.9123 22.1913C13.5956 22.3746 13.2623 22.4663 12.9123 22.4663C12.5623 22.4663 12.229 22.3746 11.9123 22.1913ZM16.9123 8.99131L18.8373 7.89131L12.9123 4.46631L10.9623 5.59131L16.9123 8.99131ZM12.9123 11.3163L14.8623 10.1913L8.93729 6.76631L6.98729 7.89131L12.9123 11.3163Z"
+                    fill="#1C1B1F" />
+                </g>
+              </svg>
+            </span>
+            <h3 class="text-[#625EA9] font-semibold text-[24px] mb-2">Cost Savings</h3>
+            <p class="text-[#22223B] text-[16px] leading-normal">
+              Open to integrate with your existing ordering systems and other software to provide seamless automation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </body>
 
 
 
-<section
-  class="bg-
+    <section class="bg-
     max-w-full
     sm:max-w-[640px]
     md:max-w-[768px]
@@ -477,150 +526,194 @@
     mx-auto
     my-12
     px-4
-  "
->
-  <!-- Tab Navigation -->
-  <div class="flex border-b border-linear-gradient(to right, #5A2D88 0%, #EB4568 100%); mb-6">
-    <button class="px-6 py-3 text-[#22223B] font-medium border-b-2 border-transparent hover:border-[#625EA9] hover:text-[#625EA9] transition-colors duration-200">
-      Admin Panel
-    </button>
-    <button class="px-6 py-3 text-[#625EA9] font-semibold border-b-2 border-[#625EA9]">
-      Driver App
-    </button>
-    <button class="px-6 py-3 text-[#22223B] font-medium border-b-2 border-transparent hover:border-[#625EA9] hover:text-[#625EA9] transition-colors duration-200">
-      Customer App
-    </button>
-  </div>
-
-  <!-- Card 1 -->
-  <div class="bg-[#F9FCFF] border border-[#EC4568] rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-8 p-8 mb-6">
-    <!-- Image Column -->
-    <div class="flex-shrink-0 w-full md:w-[320px] flex justify-center items-center mb-6 md:mb-0">
-      <img src="../" alt="Delivery App UI" class="w-[220px] md:w-[260px] rounded-xl shadow" />
-    </div>
-    <!-- Text Column -->
-    <div class="flex-1 text-left">
-      <h3 class="text-[#22223B] text-xl font-semibold mb-3">Optimize your delivery routes with delivery management</h3>
-      <p class="text-[#22223B] text-base mb-4">
-        Route optimization makes sure that the routes with traffic and partner data to build the shortest and safest delivery routes are taken into account, reducing delivery turnaround time. Our software saves you a lot time and money.
-      </p>
-      <ul class="space-y-3">
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          Reducing traffic
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          Reducing fuel costs and travel time
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          ETA accuracy
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="bg-white border border-[#E1D7EB] rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-8 p-8">
-    <!-- Image Column -->
-    <div class="flex-shrink-0 w-full md:w-[320px] flex justify-center items-center mb-6 md:mb-0">
-      <img src="https://res.cloudinary.com/pplx/image/upload/v1717588000/delivery-list-ui.png" alt="Delivery List UI" class="w-[220px] md:w-[260px] rounded-xl shadow" />
-    </div>
-    <!-- Text Column -->
-    <div class="flex-1 text-left">
-      <h3 class="text-[#22223B] text-xl font-semibold mb-3">Optimize your delivery routes with delivery management</h3>
-      <p class="text-[#22223B] text-base mb-4">
-        Route optimization makes sure that the routes with traffic and partner data to build the shortest and safest delivery routes are taken into account, reducing delivery turnaround time. Our software saves you a lot time and money.
-      </p>
-      <ul class="space-y-3">
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          Reducing traffic
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          Reducing fuel costs and travel time
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
-            <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20"><path d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z"/></svg>
-          </span>
-          ETA accuracy
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+  ">
+      <!-- Tab Navigation -->
+      <div class="flex border-b mb-6">
+  <button
+    class="px-6 py-3 font-medium border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Admin Panel
+  </button>
+  <button
+    class="px-6 py-3 text-black font-semibold border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Driver App
+  </button>
+  <button
+    class="px-6 py-3 font-medium border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Customer App
+  </button>
+</div>
 
 
+      <!-- Card 1 -->
+      <div
+        class="bg-[#F9FCFF] border border-[#EC4568] rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-8 p-8 mb-6">
+        <!-- Image Column -->
+        <div class="flex-shrink-0 w-full md:w-[320px] flex justify-center items-center mb-6 md:mb-0">
+          <img src="../" alt="Delivery App UI" class="w-[220px] md:w-[260px] rounded-xl shadow" />
+        </div>
+        <!-- Text Column -->
+        <div class="flex-1 text-left">
+          <h3 class="text-[#22223B] text-xl font-semibold mb-3">Optimize your delivery routes with delivery management
+          </h3>
+          <p class="text-[#22223B] text-base mb-4">
+            Route optimization makes sure that the routes with traffic and partner data to build the shortest and safest
+            delivery routes are taken into account, reducing delivery turnaround time. Our software saves you a lot time
+            and money.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              Reducing traffic
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              Reducing fuel costs and travel time
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              ETA accuracy
+            </li>
+          </ul>
+        </div>
+      </div>
 
-<script>
-     document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const openIcon = document.getElementById('menu-open-icon');
-    const closeIcon = document.getElementById('menu-close-icon');
+      <!-- Card 2 -->
+      <div
+        class="bg-white border border-[#E1D7EB] rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-8 p-8">
+        <!-- Image Column -->
+        <div class="flex-shrink-0 w-full md:w-[320px] flex justify-center items-center mb-6 md:mb-0">
+          <img src="https://res.cloudinary.com/pplx/image/upload/v1717588000/delivery-list-ui.png"
+            alt="Delivery List UI" class="w-[220px] md:w-[260px] rounded-xl shadow" />
+        </div>
+        <!-- Text Column -->
+        <div class="flex-1 text-left">
+          <h3 class="text-[#22223B] text-xl font-semibold mb-3">Optimize your delivery routes with delivery management
+          </h3>
+          <p class="text-[#22223B] text-base mb-4">
+            Route optimization makes sure that the routes with traffic and partner data to build the shortest and safest
+            delivery routes are taken into account, reducing delivery turnaround time. Our software saves you a lot time
+            and money.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              Reducing traffic
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              Reducing fuel costs and travel time
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#E0DFF1]">
+                <svg class="w-3 h-3 text-[#625EA9]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M7.629 16.29a1 1 0 01-1.414 0l-4.243-4.243a1 1 0 011.415-1.414l3.536 3.536 7.072-7.071a1 1 0 011.415 1.414l-7.781 7.778z" />
+                </svg>
+              </span>
+              ETA accuracy
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      openIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  });
-  // GSAP Horizontal Scroll Implementation
-  gsap.registerPlugin(ScrollTrigger);
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get all scroll content elements
-    let sections = gsap.utils.toArray(".scroll-content");
-    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          openIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      });
+      // GSAP Horizontal Scroll Implementation
+   document.addEventListener('DOMContentLoaded', function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const scrollContainer = document.querySelector("#horizontal-scroll");
+    const scrollTrack = document.querySelector("#scroll-track");
+
+    const sections = gsap.utils.toArray(".scroll-content");
+
     if (sections.length > 0) {
-      // Create the horizontal scroll animation
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
+      gsap.to(scrollTrack, {
+        x: () => `-${scrollTrack.scrollWidth - window.innerWidth}`,
         ease: "none",
         scrollTrigger: {
-          trigger: ".scroll-container",
-          pin: true,
-          scrub: 1,
-          snap: 1 / (sections.length - 1),
-          end: () => "+=" + document.querySelector(".scroll-container").offsetWidth,
-          invalidateOnRefresh: true
+          trigger: "#horizontal-section-wrapper",
+          start: "center center", // ✅ aligns horizontal in middle of screen
+          end: () => "+=" + (scrollTrack.scrollWidth - window.innerWidth),
+          pin: "#horizontal-scroll",
+          scrub: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
         }
       });
     }
 
-    // Refresh ScrollTrigger on window resize
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       ScrollTrigger.refresh();
     });
   });
-</script>
+
+    </script>
 
 <style>
   .scroll-container {
-    overflow: hidden; padding-left: 378.24px; 
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 500px; /* Adjust for card height */
+    overflow: hidden;
+    position: relative;
   }
-  
+
+  #horizontal-section-wrapper {
+    position: relative;
+    min-height: 100vh;
+  }
+
   .scroll-content {
     flex-shrink: 0;
   }
 </style>
 
-<script>
-  console.log(tailwind);
-</script>
+
+    <script>
+      console.log(tailwind);
+    </script>
 
 </body>
+
 </html>
