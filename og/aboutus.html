@@ -5,22 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Hero</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  
+      
+
+
+  
+
+
 </head>
 <body class="bg-white">
 
 
 <div class="relative bg-black flex items-center justify-center text-center bg-cover bg-no-repeat bg-center px-4 sm:px-6 md:bg-[center_75%]  h-[400px] sm:h-[500px] md:h-[650px] " style="background-image: url('images/6e8988385a0ec9c12755480a5e09ae9e921b2e44.jpg');">
   
-  <!-- 🔹 Blurred Ellipse (hidden on very small screens) -->
-  <div class="absolute left-[-150px] top-[50px] w-[538px] h-[538px] bg-[#EB456826] rounded-full blur-[184px] z-0 hidden sm:block"></div>
+
 
   <!-- 🔸 Gradient Overlay -->
-  <div class="absolute top-0 left-0 w-full h-full bg-[#533077DE] pointer-events-none z-0"></div>
+  <div class="absolute top-0 left-0 w-full h-full bg-[#533077DE] pointer-events-none z-0">
 
+ <img src="images/Ellipse 1521.png" alt="Left Image"
+       class="absolute  -left-[50px]  -top-[200px]  md:-top-[70px] h-[850px]  w-auto object-contain pointer-events-none" />
+  </div>
   <!-- 🔹 Text Content -->
   <div class="relative z-10 max-w-4xl mx-auto">
-    <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug  leading-tight">
+    <h1 class="text-white text-2xl sm:text-3xl m d:text-4xl lg:text-5xl font-bold leading-snug  leading-tight">
       Join Our Team and Shape the <br class="hidden sm:block"> Future of Technology
     </h1>
     <p class="mt-4 text-white text-sm sm:text-base md:text-xl leading-relaxed">
@@ -215,33 +227,32 @@ bringing together a group of innovative minds to form our initial core team.</p>
 </div>
 
 
+<!--Footer-->
 
-<!--footer-->
-<footer class="w-full bg-black text-white px-4 py-10">
-  <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row flex-wrap gap-6 justify-between">
-
-    <!-- Column 1 -->
-    <div class="w-fit">
-      <div>
-        <img src="images/-"
-        alt=""
-        class="">
-      </div>
-      <h2 class="text-xl font-bold mb-2">About</h2>
-      <p>
-        We deliver innovative solutions in hyperlocal <br> delivery, fleet management, <br> and tailored software development.
+<footer class="w-full bg-black text-white px-4 pt-[80px] pb-[40px]">
+  <div class="max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    
+    <!-- About -->
+    <div>
+      <img src="images/Group.png" alt="Logo" class="mb-4 w-[150px] sm:w-[234px]">
+      <p class="text-sm leading-relaxed pt-4">
+        We deliver innovative solutions in hyperlocal <br> 
+        delivery, fleet management, and tailored <br>
+        software development, empowering <br>
+        businesses to thrive.
       </p>
     </div>
 
-    <!-- Column 2 -->
-    <div class="w-fit">
-      <h2 class="text-xl font-bold mb-2">Quick Links</h2>
-      <ul class=" list-inside space-y-1 ">
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Careers</li>
-        <li>Contact</li>
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul class="space-y-4 text-sm">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#" class="hover:underline">About us</a></li>
+        <li><a href="#" class="hover:underline">Services</a></li>
+        <li><a href="#" class="hover:underline">Products</a></li>
+        <li><a href="#" class="hover:underline">Careers</a></li>
+        <li><a href="#" class="hover:underline">Contact Us</a></li>
       </ul>
     </div>
 
@@ -288,6 +299,14 @@ bringing together a group of innovative minds to form our initial core team.</p>
     </div>
   </div>
 </footer>
+
+
+
+
+
+
+  <!-- Horizontal scroll section -->
+
 
 </body>
 </html>
