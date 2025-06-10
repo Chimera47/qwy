@@ -27,7 +27,7 @@
     tailwind.config = {
       theme: {
         screens: {
-          
+           'xs': '320px',
           'sm': '640px',
           'md': '768px',
           'lg': '1024px',
@@ -62,8 +62,11 @@
 
     <!-- Logo -->
    <!-- Logo -->
-<div class="flex items-center lg:-ml-2 xl:-ml-4 2xl:-ml-5 3xl:-ml-[8%] sm:width-[]">
-  <img src="../og/images/Group (1).png" alt="QWY Software" class="h-8 w-auto max-w-[234.35px]" />
+<div class="flex items-center sm:ml-5 lg:-ml-2 xl:-ml-4 2xl:-ml-5 3xl:-ml-[9%] min-w-max">
+  <img 
+    src="../og/images/Group (1).png" 
+    alt="QWY Software" 
+    class="h-4 sm:h-8 3xl:h-9 3xl:w-[234px] object-contain"/>
 </div>
 
 
@@ -110,7 +113,7 @@
 </header>
 
 
-<section class="bg-white pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt- pb-16 sm:pb-20">
+<section class="bg-[#FCFCFC] pt-4 sm:pt-6 md:pt-10 lg:pt-14 xl:pt-20 2xl:pt-24 3xl:pt- pb-16 sm:pb-20">
   <div class="max-w-7xl 2xl:max-w-[1500px] 3xl:max-w-[1600px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-8 2xl:px-16 3xl:px-26">
     <!-- Left: Headline and Description -->
     <div class="w-full lg:w-1/2 flex flex-col items-start mt-[-10px] sm:mt-[-20px]">
@@ -124,7 +127,8 @@
     <span class="block">Management, Made</span>
     <span class="block">Simple</span>
   </h1>
-      <p class="text-[14px] sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] font-normal sm:font-medium text-gray-700 max-w-[300px] sm:max-w-none mb-4 sm:mb-8 text-left leading-snug">
+ 
+      <p class=" text-[14px] sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl 3xl:text-[20px] font-normal sm:font-medium text-gray-700 max-w-[300px] sm:max-w-none mb-4 sm:mb-8 text-left leading-snug pt">
         Simplify operations, reduce costs, and enhance customer experiences with our advanced delivery management software
       </p>
     </div>
@@ -141,7 +145,7 @@
 
 
 <!-- Modified Header Section -->
-<section class="relative bg-white w-full py-12 sm:py-16 md:py-20">
+<section class=" relative bg-white w-full pt-20 sm:py-10 md:py-20" style="padding-top: 120px; ">
   <div class="max-w-7xl 1xl:min-w-[1200px] 2xl:min-w-[1400px] 3xl:max-w-[1600px] mx-auto px-4 sm:px-6 sm:pt-10 md:px-8 xl:px-12 text-center">
 
     <!-- Heading for mobile (300px-640px) - 3 rows -->
@@ -152,10 +156,11 @@
     </h2>
 
     <!-- Heading for md screens (768px-1023px) -->
-    <h2 class="hidden sm:block md:block lg:hidden text-3xl font-semibold mb-4 tracking-wide text-[#333333]">
-      <span class="block">Boost Your Delivery Business</span>
-      <span class="block">with an All-in-One Platform</span>
-    </h2>
+   <h2 class="hidden sm:block md:block lg:hidden text-3xl font-semibold mb-4 tracking-wide text-[#333333] text-[29px] relative" style="top: -25px;">
+  <span class="block">Boost Your Delivery Business</span>
+  <span class="block">with an All-in-One Platform</span>
+</h2>
+
 
     <!-- Original heading for lg+ screens -->
     <h2 class="hidden lg:block text-[48px] font-semibold mb-4 tracking-wide text-[#333333]">
@@ -178,7 +183,7 @@
 
       <!-- Medium screen version (768px-1023px) -->
       <div class="hidden sm:block lg:hidden relative w-full">
-        <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto max-h-[300px] object-contain" />
+        <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto max-h-[250px] object-contain" />
         
         <!-- Adjusted icons for md screens -->
         <div class="absolute inset-0 w-full h-full">
@@ -204,27 +209,27 @@
       </div>
 
       <!-- Original roadmap for lg+ screens -->
-      <div class="hidden lg:block relative w-full">
+      <div class="hidden lg:block relative w-full pt-[203px]">
         <img src="../og/images/roadmap.png" alt="Road" class="w-full h-auto" />
 
         <!-- Steps overlayed on road -->
         <div class="absolute inset-0 w-full h-full">
-          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 12%;">
+          <div class="absolute flex flex-col items-center" style="bottom: 59%; left: 12%;">
             <img src="../og/images/Vector (1).svg" class="w-[67] h-[67] mb-2" />
           </div>
           <div class="absolute flex flex-col items-center" style="top: 115%; left: 26%;">
             <img src="../og/images/roll.svg" class="w-[75] h-[70] mb-2" />
           </div>
-          <div class="absolute flex flex-col items-center" style="bottom: 107%; left: 40%;">
+          <div class="absolute flex flex-col items-center" style="bottom: 60%; left: 40%;">
             <img src="../og/images/location.svg" class="w-[63] h-[67] mb-2" />
           </div>
           <div class="absolute flex flex-col items-center" style="top: 115%; left: 55%;">
             <img src="../og/images/Vector (1).svg" class="w-[12vw] max-w-[70px] mb-2" />
           </div>
-          <div class="absolute flex flex-col items-center" style="bottom:107%; left: 68%;">
+          <div class="absolute flex flex-col items-center" style="bottom:59%; left: 67%;">
             <img src="../og/images/truck.svg" class="w-[109] h-[67] mb-2" />
           </div>
-          <div class="absolute flex flex-col items-center" style="top: 115%; left: 84%;">
+          <div class="absolute flex flex-col items-center" style="top: 115%; left: 85%;">
             <img src="../og/images/rategrowth.svg" class="w-[70] h-[70] mb-2" />
           </div>
         </div>
@@ -246,17 +251,17 @@
 
 
           <!-- Card 1 -->
-          <div class="
+            <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
   md:w-[340px] md:h-[350px] md:p-6
-  lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
-  xl:w-[500px] xl:h-[334px] xl:p-6
-  1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+  lg:w-[500px] lg:h-[323px] lg:flex-row lg:items-center lg:p-4
+  xl:w-[500px] xl:h-[334px] xl:p-4
+  1xl:w-[570px] 1xl:h-[380px] 1xl:p-4
   2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
-  mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+  mr-4 sm:mr-6 md:mr-8 lg:mr- xl:mr-6 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
             <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
@@ -267,10 +272,10 @@
             </div>
             <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
               <h3
-                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                class="font-semibold text-lg sm:text-xl md:text-1xl lg:text-[19px] xl:text-[20] 1xl:text-[22px] 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
                 Startups
               </h3>
-              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-[14px] 1xl:text-[15px] 2xl:text-[17px] 3xl:text-[18px] leading-relaxed">
                 Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
                 <br>delivery
               </p>
@@ -279,17 +284,17 @@
 
 
           <!-- Card 2 -->
-          <div class="
+                <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
   md:w-[340px] md:h-[350px] md:p-6
-  lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
-  xl:w-[500px] xl:h-[334px] xl:p-6
-  1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+  lg:w-[500px] lg:h-[323px] lg:flex-row lg:items-center lg:p-4
+  xl:w-[500px] xl:h-[334px] xl:p-4
+  1xl:w-[570px] 1xl:h-[380px] 1xl:p-4
   2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
-  mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+  mr-4 sm:mr-6 md:mr-8 lg:mr- xl:mr-6 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
             <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
@@ -300,10 +305,10 @@
             </div>
             <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
               <h3
-                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                class="font-semibold text-lg sm:text-xl md:text-1xl lg:text-[19px] xl:text-[20] 1xl:text-[22px] 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
                 Startups
               </h3>
-              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-[14px] 1xl:text-[15px] 2xl:text-[17px] 3xl:text-[18px] leading-relaxed">
                 Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
                 <br>delivery
               </p>
@@ -311,18 +316,19 @@
           </div>
 
 
+
           <!-- Card 3 -->
-          <div class="
+         <div class="
   scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
   md:w-[340px] md:h-[350px] md:p-6
-  lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
-  xl:w-[500px] xl:h-[334px] xl:p-6
-  1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+  lg:w-[500px] lg:h-[323px] lg:flex-row lg:items-center lg:p-4
+  xl:w-[500px] xl:h-[334px] xl:p-4
+  1xl:w-[570px] 1xl:h-[380px] 1xl:p-4
   2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
-  mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+  mr-4 sm:mr-6 md:mr-8 lg:mr- xl:mr-6 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
             <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
@@ -333,10 +339,10 @@
             </div>
             <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
               <h3
-                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                class="font-semibold text-lg sm:text-xl md:text-1xl lg:text-[19px] xl:text-[20] 1xl:text-[22px] 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
                 Startups
               </h3>
-              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-[14px] 1xl:text-[15px] 2xl:text-[17px] 3xl:text-[18px] leading-relaxed">
                 Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
                 <br>delivery
               </p>
@@ -350,12 +356,12 @@
   w-[280px] h-[320px] p-4 flex flex-col
   sm:w-[302.25px] sm:h-[315.96px] sm:p-5
   md:w-[340px] md:h-[350px] md:p-6
-  lg:w-[400px] lg:h-[267px] lg:flex-row lg:items-center lg:p-8
-  xl:w-[500px] xl:h-[334px] xl:p-6
-  1xl:w-[570px] 1xl:h-[380px] 1xl:p-6
+  lg:w-[500px] lg:h-[323px] lg:flex-row lg:items-center lg:p-4
+  xl:w-[500px] xl:h-[334px] xl:p-4
+  1xl:w-[570px] 1xl:h-[380px] 1xl:p-4
   2xl:w-[620px] 2xl:h-[413px] 2xl:p-6
   3xl:w-[668px] 3xl:h-[446px] 3xl:p-4
-  mr-4 sm:mr-6 md:mr-8 lg:mr-12 xl:mr-16 1xl:mr-6 2xl:mr-6 3xl:mr-6
+  mr-4 sm:mr-6 md:mr-8 lg:mr- xl:mr-6 1xl:mr-6 2xl:mr-6 3xl:mr-6
 ">
             <div class="
     w-full h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 
@@ -366,17 +372,17 @@
             </div>
             <div class="w-full lg:flex-1 lg:flex lg:flex-col lg:justify-center text-left">
               <h3
-                class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
+                class="font-semibold text-lg sm:text-xl md:text-1xl lg:text-[19px] xl:text-[20] 1xl:text-[22px] 3xl:text-[24px] mb-2 lg:mb-4 text-[#333333]">
                 Startups
               </h3>
-              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-[18px] leading-relaxed">
+              <p class="text-[#333333] text-sm sm:text-base md:text-lg lg:text-[14px] 1xl:text-[15px] 2xl:text-[17px] 3xl:text-[18px] leading-relaxed">
                 Rapidly scale your business with a SaaS solution that focuses on supply chain automation & last-mile
                 <br>delivery
               </p>
             </div>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
     </section>
 
@@ -394,14 +400,14 @@
     min-h-[742.02px]">
     
     <!-- Responsive Header -->
-    <h2 class="text-[28px] sm:text-[24px] weight-[500] md:text-[40px] lg:text-[48px] font-bold mb-8 sm:mb-10 leading-tight px-4 sm:px-8 md:px-12 lg:px-16">
+    <h2 class="text-[22px] sm:text-[24px] weight-[500] md:text-[40px] lg:text-[48px] font-bold mb-8 sm:mb-10 leading-tight px-4 sm:px-8 md:px-12 lg:px-16">
       <span class="text-[#625EA9]">Smart Technology</span>
       <span class="text-[#22223B] font-normal"> for <br></span>
       <span class="text-[#22223B] font-normal">Future Businesses</span>
     </h2>
     
     <!-- Responsive Grid Container -->
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-[20px] lg:gap-[30px] xl:gap-[40px] 1xl:gap-[50px] 2xl:gap-[70px] 3xl:gap-[90px] md:px-10 lg:px-16">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6 sm:gap-8 md:gap-[20px] lg:gap-[30px] xl:gap-[40px] 1xl:gap-[60px] 2xl:gap-[70px] 3xl:gap-[90px] md:px-10 lg:px-16">
       
       <!-- Card 1 -->
       <div class="relative bg-white rounded-xl p-4 sm:p-6 pt-12 sm:pt-10 min-h-[160px] sm:min-h-[170px] 1xl:min-h-[180px] 2xl:min-h-[200px] flex flex-col shadow-none">
@@ -415,8 +421,8 @@
             </g>
           </svg>
         </span>
-        <h3 class="text-[#625EA9] font-semibold text-[20px] sm:text-[24px] mb-2 sm:mb-3">Cost Savings</h3>
-        <p class="text-[#22223B] text-[14px] sm:text-[16px] leading-relaxed">
+        <h3 class="text-[#625EA9] font-semibold text-[18px] sm:text-[18px] md:text-[20] lg:text-[20px] xl[20px] 1xl:[21px] 2xl:[22px] 3xl:[24px]  mb-2 sm:mb-3">Cost Savings</h3>
+        <p class="text-[#22223B] text-[13px] sm:text-[14px] md:text-[14] lg:text-[14px] xl[14px] 1xl:[15px] 2xl:[16px] 3xl:[16px] leading-relaxed">
           Open to integrate with your existing ordering systems and other software to provide seamless automation.
         </p>
       </div>
@@ -433,11 +439,12 @@
             </g>
           </svg>
         </span>
-        <h3 class="text-[#625EA9] font-semibold text-[20px] sm:text-[24px] mb-2 sm:mb-3">Robust & Scalable</h3>
-        <p class="text-[#22223B] text-[14px] sm:text-[16px] leading-relaxed">
+       <h3 class="text-[#625EA9] font-semibold text-[18px] sm:text-[18px] md:text-[20] lg:text-[20px] xl[20px] 1xl:[21px] 2xl:[22px] 3xl:[24px]  mb-2 sm:mb-3">Cost Savings</h3>
+        <p class="text-[#22223B] text-[14px] sm:text-[14px] md:text-[14] lg:text-[14px] xl[14px] 1xl:[15px] 2xl:[16px] 3xl:[16px] leading-relaxed">
           Open to integrate with your existing ordering systems and other software to provide seamless automation.
         </p>
       </div>
+
 
       <!-- Card 3 -->
       <div class="relative bg-white rounded-xl p-4 sm:p-6 pt-12 sm:pt-10 min-h-[160px] sm:min-h-[170px] 1xl:min-h-[180px] 2xl:min-h-[200px] flex flex-col shadow-none">
@@ -451,11 +458,12 @@
             </g>
           </svg>
         </span>
-        <h3 class="text-[#625EA9] font-semibold text-[20px] sm:text-[24px] mb-2 sm:mb-3">Easy Integration</h3>
-        <p class="text-[#22223B] text-[14px] sm:text-[16px] leading-relaxed">
+         <h3 class="text-[#625EA9] font-semibold text-[18px] sm:text-[18px] md:text-[20] lg:text-[20px] xl[20px] 1xl:[21px] 2xl:[22px] 3xl:[24px]  mb-2 sm:mb-3">Cost Savings</h3>
+        <p class="text-[#22223B] text-[13px] sm:text-[14px] md:text-[14] lg:text-[14px] xl[14px] 1xl:[15px] 2xl:[16px] 3xl:[16px] leading-relaxed">
           Open to integrate with your existing ordering systems and other software to provide seamless automation.
         </p>
       </div>
+
 
       <!-- Card 4 -->
       <div class="relative bg-white rounded-xl p-4 sm:p-6 pt-12 sm:pt-10 min-h-[160px] sm:min-h-[170px] 1xl:min-h-[180px] 2xl:min-h-[200px] flex flex-col shadow-none">
@@ -469,11 +477,12 @@
             </g>
           </svg>
         </span>
-        <h3 class="text-[#625EA9] font-semibold text-[20px] sm:text-[24px] mb-2 sm:mb-3">User Management</h3>
-        <p class="text-[#22223B] text-[14px] sm:text-[16px] leading-relaxed">
+       <h3 class="text-[#625EA9] font-semibold text-[18px] sm:text-[18px] md:text-[20] lg:text-[20px] xl[20px] 1xl:[21px] 2xl:[22px] 3xl:[24px]  mb-2 sm:mb-3">Cost Savings</h3>
+        <p class="text-[#22223B] text-[13px] sm:text-[14px] md:text-[14] lg:text-[14px] xl[14px] 1xl:[15px] 2xl:[16px] 3xl:[16px] leading-relaxed">
           Open to integrate with your existing ordering systems and other software to provide seamless automation.
         </p>
       </div>
+
 
       <!-- Card 5 -->
       <div class="relative bg-white rounded-xl p-4 sm:p-6 pt-12 sm:pt-10 min-h-[160px] sm:min-h-[170px] 1xl:min-h-[180px] 2xl:min-h-[200px] flex flex-col shadow-none">
@@ -527,22 +536,22 @@
     3xl:max-w-[1600px]" id="tabbed-section-with-buttons">
     
     <!-- Tab Navigation -->
-    <div id="tab-buttons" class="flex flex-col sm:flex-row border-b border-gray-200 mb-8" role="tablist">
-      <button data-tab="admin-group" role="tab" aria-controls="admin-group" aria-selected="false"
-        class="tab-btn px-6 py-4 font-medium text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
-        Admin Panel
-      </button>
-    
-      <button data-tab="driver-group" role="tab" aria-controls="driver-group" aria-selected="true"
-         class="tab-btn px-6 py-4 font-medium text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
-        Driver App
-      </button>
-    
-      <button data-tab="customer-group" role="tab" aria-controls="customer-group" aria-selected="false"
-        class="tab-btn px-6 py-4 font-medium text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
-        Customer App
-      </button>
-    </div>
+ <div id="tab-buttons" class="flex flex-row border-b border-gray-200 mb-8" role="tablist">
+  <button data-tab="admin-group" role="tab" aria-controls="admin-group" aria-selected="false"
+    class="tab-btn px-6 py-4 size[] font-semibold text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Admin Panel
+  </button>
+  <button data-tab="driver-group" role="tab" aria-controls="driver-group" aria-selected="true"
+    class="tab-btn px-6 py-4 font-semibold text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Driver App
+  </button>
+  <button data-tab="customer-group" role="tab" aria-controls="customer-group" aria-selected="false"
+    class="tab-btn px-6 py-4 font-semibold text-gray-500 hover:text-[#625EA9] border-b-2 border-transparent hover:border-[#625EA9] transition-colors duration-200">
+    Customer App
+  </button>
+</div>
+
+
 
     <!-- Admin Panel Content Group (Hidden by default) -->
     <div id="admin-group" class="tab-content-group hidden">
@@ -923,7 +932,7 @@ document.addEventListener('DOMContentLoaded', function() {
     flex-shrink: 0;
   }
 
-  /* 🔥 First card alignment across all breakpoints */
+  /*   breakpoints alignment */
   #scroll-track .scroll-content:first-child {
     margin-left: 4vw;
   }
