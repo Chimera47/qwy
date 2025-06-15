@@ -29,6 +29,7 @@
 
     .scroll-content {
       flex-shrink: 0;
+      margin-right: 0;
     }
 
     #scroll-track .scroll-content:first-child {
@@ -216,7 +217,7 @@
         Reshaping Global Businesses
       </h2>
       <div id="horizontal-scroll" class="scroll-container overflow-hidden">
-        <div id="scroll-track" class="flex w-max">
+        <div id="scroll-track" class="flex items-center justify-center">
           <div class="scroll-content bg-white rounded-2xl border border-[#58595B] shadow-md flex-shrink-0 w-[280px] h-[320px] p-4 flex flex-col xs:w-[280px] xs:h-[320px] xs:p-4 sm:w-[302.25px] sm:h-[315.96px] sm:p-5 md:w-[340px] md:h-[350px] md:p-6 lg:w-[500px] lg:h-[323px] lg:flex-row lg:items-center lg:p-4 xl:w-[500px] xl:h-[334px] xl:p-4 1xl:w-[570px] 1xl:h-[380px] 1xl:p-4 2xl:w-[620px] 2xl:h-[413px] 2xl:p-6 3xl:w-[668px] 3xl:h-[446px] 3xl:p-4 mr-4 xs:mr-4 sm:mr-6 md:mr-8 lg:mr-6 xl:mr-6 1xl:mr-6 2xl:mr-6 3xl:mr-6">
             <div class="w-full h-[160px] xs:h-[160px] sm:h-[180px] md:h-[200px] mb-4 overflow-hidden rounded-lg bg-gray-100 sm:w-[281.02px] sm:h-[202.37px] lg:w-[180px] lg:h-[248px] xl:w-[225px] xl:h-[310px] 1xl:w-[257px] 1xl:h-[353px] 2xl:w-[279px] 2xl:h-[383px] 3xl:w-[301.77px] 3xl:h-[414px] lg:mb-0 lg:mr-8 lg:flex-shrink-0">
               <img src="images/1705856268611.png" alt="Startups" class="w-full h-full object-cover object-left" />
@@ -691,28 +692,37 @@
       });
 
       gsap.registerPlugin(ScrollTrigger);
-      const scrollTrack = document.querySelector("#scroll-track");
-      const totalScroll = scrollTrack.scrollWidth - window.innerWidth;
+        const scrollTrack = document.querySelector("#scroll-track");
+        const scrollContent = document.querySelectorAll(".scroll-content");
 
-      gsap.to(scrollTrack, {
-        x: () => `-${totalScroll}px`,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: "#reshaping-section",
-          start: "top top",
-          position: "fixed",
-          end: () => "+=" + totalScroll,
-          scrub: 0.6,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        }
-      });
+        let totalScrollWidth = 0;
+        scrollContent.forEach(content => {
+          totalScrollWidth += content.offsetWidth + 0; 
+        });
 
-      window.addEventListener("resize", () => {
-        ScrollTrigger.refresh();
-      });
-    });
+        gsap.set(scrollTrack, { width: totalScrollWidth });
+
+        gsap.set(scrollTrack, { x: 0 });
+
+        gsap.to(scrollTrack, {
+          x: () => `-${totalScrollWidth - window.innerWidth + 520}px`,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: "#reshaping-section",
+            start: "top top",
+            position: "fixed",
+            end: () => `+=${totalScrollWidth}`,
+            scrub: 0.6,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+          }
+        });
+
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
+});
   </script>
 </body>
 
